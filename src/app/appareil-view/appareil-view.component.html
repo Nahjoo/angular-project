@@ -2,7 +2,8 @@
 <app-appareil  *ngFor="let appareil of appareils; let i = index"
           [appareilName]="appareil.name"
           [appareilStatus]="appareil.status"
-          [index]="i"></app-appareil>
+          [index]="i"
+          [id]="appareil.id"></app-appareil>
 <p>Mis à jour : {{ lastUpdate | async | date: 'yMMMMEEEEd' | uppercase }}</p>          
 <button class="btn btn-success" [disabled]="!isAuth" (click)="onAllumer()">Tout allumer</button>
 <button class="btn btn-danger"
